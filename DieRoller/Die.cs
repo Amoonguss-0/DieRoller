@@ -29,11 +29,15 @@ namespace DieRoller
         /// to the new number
         /// </summary>
         /// <returns>Returns the new random number</returns>
-        public void Roll()
+        public byte Roll()
         {
             // Generate random number
-            // Set to face value
-            throw new NotImplementedException();
+            Random random = new Random();
+            byte newValue = (byte)random.Next(1, 7);
+
+            FaceValue = newValue;
+
+            return FaceValue;
         }
     }
 }
